@@ -82,6 +82,10 @@ public class CPT implements ConditionalProbabilityTable {
 	public double getValue(AssignmentProposition... eventValues) {
 		return table.getValue(eventValues);
 	}
+	
+	public double[] getValues(){
+		return table.getValues();
+	}
 
 	@Override
 	public Object getSample(double probabilityChoice, Object... parentValues) {
