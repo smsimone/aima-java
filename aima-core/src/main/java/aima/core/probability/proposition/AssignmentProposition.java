@@ -4,12 +4,12 @@ import java.util.Map;
 
 import aima.core.probability.RandomVariable;
 
-public class AssignmentProposition extends AbstractTermProposition {
-	private Object value = null;
+public class AssignmentProposition<T> extends AbstractTermProposition {
+	private T value = null;
 	//
 	private String toString = null;
 
-	public AssignmentProposition(RandomVariable forVariable, Object value) {
+	public AssignmentProposition(RandomVariable forVariable, T value) {
 		super(forVariable);
 		setValue(value);
 	}
@@ -18,7 +18,7 @@ public class AssignmentProposition extends AbstractTermProposition {
 		return value;
 	}
 	
-	public void setValue(Object value) {
+	public void setValue(T value) {
 		if (null == value) {
 			throw new IllegalArgumentException(
 					"The value for the Random Variable must be specified.");
