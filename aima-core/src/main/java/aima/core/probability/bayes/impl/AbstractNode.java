@@ -36,8 +36,7 @@ public abstract class AbstractNode implements Node {
 				this.parents.add(p);
 			}
 		}
-		this.parents = Collections.unmodifiableSet(this.parents);
-		this.children = Collections.unmodifiableSet(new LinkedHashSet<Node>());
+		this.children = new LinkedHashSet<>();
 	}
 
 	//
@@ -118,6 +117,5 @@ public abstract class AbstractNode implements Node {
 
 		children.add(childNode);
 
-		children = Collections.unmodifiableSet(children);
 	}
 }
